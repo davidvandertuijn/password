@@ -22,9 +22,9 @@ class Password
         $bIncludeLowercaseCharacters = true,
         $bIncludeUppercaseCharacters = true,
         $bIncludeNumbers = true,
-        $bIncludeSymbols = true,
+        $bIncludeSymbols = false,
         $bExcludeSimilarCharacters = true,
-        $bExcludeAmbiguousCharacters = true
+        $bExcludeAmbiguousCharacters = false
     ){
         $sChars = null;
 
