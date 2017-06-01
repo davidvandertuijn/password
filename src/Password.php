@@ -55,8 +55,8 @@ class Password
         // Exclude similar characters.
 
         if ($bExcludeSimilarCharacters) {
-            $aSearch = ['i', 'I', '1', 'L', 'o', 'O', '0'];
-            $aReplace = ['', '', '', '', '', '', ''];
+            $aSearch = ['i', 'I', '1', 'l', 'L', 'o', 'O', '0'];
+            $aReplace = ['', '', '', '', '', '', '', ''];
 
             $sChars = str_replace($aSearch, $aReplace, $sChars);
         }
