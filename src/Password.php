@@ -7,7 +7,7 @@ class Password
     /**
      * Generate.
      *
-     * @param int $iLength
+     * @param int  $iLength
      * @param bool $bIncludeLowercaseCharacters
      * @param bool $bIncludeUppercaseCharacters
      * @param bool $bIncludeNumbers
@@ -25,7 +25,7 @@ class Password
         $bIncludeSymbols = false,
         $bExcludeSimilarCharacters = true,
         $bExcludeAmbiguousCharacters = false
-    ){
+    ) {
         $sChars = null;
 
         // Include lowercase characters.
