@@ -25,7 +25,7 @@ class Password
         $bIncludeSymbols = false,
         $bExcludeSimilarCharacters = true,
         $bExcludeAmbiguousCharacters = false
-    ) {
+    ): string {
         $sChars = null;
 
         // Include lowercase characters.
