@@ -3,7 +3,6 @@
 <a href="https://packagist.org/packages/davidvandertuijn/password"><img src="https://poser.pugx.org/davidvandertuijn/password/d/total.svg" alt="Total Downloads"></a>
 <a href="https://packagist.org/packages/davidvandertuijn/password"><img src="https://poser.pugx.org/davidvandertuijn/password/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/davidvandertuijn/password"><img src="https://poser.pugx.org/davidvandertuijn/password/license.svg" alt="License"></a>
-<img src="https://github.styleci.io/repos/92985722/shield?style=flat" alt="StyleCI">
 
 ## Install
 

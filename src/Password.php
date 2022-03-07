@@ -2,82 +2,85 @@
 
 namespace Davidvandertuijn;
 
+/**
+ * Password.
+ */
 class Password
 {
     /**
      * Generate.
      *
-     * @param int  $iLength
-     * @param bool $bIncludeLowercaseCharacters
-     * @param bool $bIncludeUppercaseCharacters
-     * @param bool $bIncludeNumbers
-     * @param bool $bIncludeSymbols
-     * @param bool $bExcludeSimilarCharacters
-     * @param bool $bExcludeAmbiguousCharacters
+     * @param int $length
+     * @param bool $includeLowercaseCharacters
+     * @param bool $includeUppercaseCharacters
+     * @param bool $includeNumbers
+     * @param bool $includeSymbols
+     * @param bool $excludeSimilarCharacters
+     * @param bool $excludeAmbiguousCharacters
      *
-     * @return string $sPassword
+     * @return string $password
      */
     public static function generate(
-        $iLength = 8,
-        $bIncludeLowercaseCharacters = true,
-        $bIncludeUppercaseCharacters = true,
-        $bIncludeNumbers = true,
-        $bIncludeSymbols = false,
-        $bExcludeSimilarCharacters = true,
-        $bExcludeAmbiguousCharacters = false
+        $length = 8,
+        $includeLowercaseCharacters = true,
+        $includeUppercaseCharacters = true,
+        $includeNumbers = true,
+        $includeSymbols = false,
+        $excludeSimilarCharacters = true,
+        $excludeAmbiguousCharacters = false
     ): string {
-        $sChars = null;
+        $chars = null;
 
         // Include lowercase characters.
 
-        if ($bIncludeLowercaseCharacters) {
-            $sChars .= 'abcdefghijklmnopqrstuvwxyz';
+        if ($includeLowercaseCharacters) {
+            $chars .= 'abcdefghijklmnopqrstuvwxyz';
         }
 
         // Include uppercase characters.
 
-        if ($bIncludeUppercaseCharacters) {
-            $sChars .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        if ($includeUppercaseCharacters) {
+            $chars .= 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
         }
 
         // Include numbers.
 
-        if ($bIncludeNumbers) {
-            $sChars .= '0123456789';
+        if ($includeNumbers) {
+            $chars .= '0123456789';
         }
 
         // Include symbols.
 
-        if ($bIncludeSymbols) {
-            $sChars .= "`~!@#$%^&*()_-+={}[]\|:;\"'<>,.?/";
+        if ($includeSymbols) {
+            $chars .= "`~!@#$%^&*()_-+={}[]\|:;\"'<>,.?/";
         }
 
         // Exclude similar characters.
 
-        if ($bExcludeSimilarCharacters) {
-            $aSearch = ['i', 'I', '1', 'l', 'L', 'o', 'O', '0'];
-            $aReplace = ['', '', '', '', '', '', '', ''];
+        if ($excludeSimilarCharacters) {
+            $search = ['i', 'I', '1', 'l', 'L', 'o', 'O', '0'];
+            $replace = ['', '', '', '', '', '', '', ''];
 
-            $sChars = str_replace($aSearch, $aReplace, $sChars);
+            $chars = str_replace($search, $replace, $chars);
         }
 
         // Exclude ambiguous characters.
 
-        if ($bExcludeAmbiguousCharacters) {
-            $aSearch = ['{', '}', '[', ']', '(', ')', '/', '\\', "'", '"', '~', ',', ';', ':', '.', '>'];
-            $aReplace = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
+        if ($excludeAmbiguousCharacters) {
+            $search = ['{', '}', '[', ']', '(', ')', '/', '\\', "'", '"', '~', ',', ';', ':', '.', '>'];
+            $replace = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''];
 
-            $sChars = str_replace($aSearch, $aReplace, $sChars);
+            $chars = str_replace($search, $replace, $chars);
         }
 
-        $iSize = strlen($sChars) - 1;
+        $size = strlen($chars) - 1;
 
-        $sPassword = null;
+        $password = null;
 
-        while ($iLength--) {
-            $sPassword .= $sChars[rand(0, $iSize)];
+        while ($length--) {
+            $password .= $chars[rand(0, $size)];
         }
 
-        return $sPassword;
+        return $password;
     }
 }
