@@ -25,7 +25,7 @@ Password::generate();
 **Advanced**
 
 ```php
-$sPassword = Password::generate(
+Password::generate(
     8, // Password length.
     true, // Include lowercase characters.
     true, // Include uppercase characters.
