@@ -4,6 +4,8 @@
 <a href="https://packagist.org/packages/davidvandertuijn/password"><img src="https://poser.pugx.org/davidvandertuijn/password/v/stable.svg" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/davidvandertuijn/password"><img src="https://poser.pugx.org/davidvandertuijn/password/license.svg" alt="License"></a>
 
+![Password Generator](https://cdn.davidvandertuijn.nl/github/password.png)
+
 ## Install
 
 ```
