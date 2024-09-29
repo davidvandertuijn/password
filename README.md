@@ -6,6 +6,10 @@
 
 ![Password Generator](https://cdn.davidvandertuijn.nl/github/password.png)
 
+The Password Generator is a robust tool designed to create secure and complex passwords for enhanced online security. With cyber threats on the rise, having strong, unique passwords is essential for protecting sensitive information across various platforms.
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/davidvandertuijn)
+
 ## Install
 
 ```
